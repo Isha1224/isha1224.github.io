@@ -1,79 +1,72 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>To-Do App</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-        }
-        
-        .container {
-            width: 400px;
-            margin: 0 auto;
-            padding: 20px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-        
-        h1 {
-            text-align: center;
-        }
-        
-        #taskInput {
-            max-width: 80%;
-            padding: 10px;
-            margin-bottom: 10px;
-        }
-        
-        #taskList {
-            list-style-type: none;
-            padding: 0;
-        }
-        
-        .taskItem {
-            display: flex;
-            align-items: center;
-            margin-bottom: 5px;
-        }
-        
-        .taskItem input[type="checkbox"] {
-            margin-right: 10px;
-        }
-        
-        .taskItem .taskText {
-            flex-grow: 1;
-        }
-    </style>
+  <title>My Blog</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+
+    main {
+      max-width: 800px;
+      margin: 20px auto;
+      padding: 20px;
+    }
+
+    h1 {
+      margin-top: 0;
+    }
+
+    article {
+      margin-bottom: 30px;
+    }
+
+    .post-title {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    .post-date {
+      color: #666;
+      font-size: 14px;
+      margin-bottom: 10px;
+    }
+
+    .post-content {
+      line-height: 1.6;
+    }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <h1>To-Do List</h1>
-        <input type="text" id="taskInput" placeholder="Enter a task...">
-        <ul id="taskList"></ul>
-    </div>
+  <header>
+    <h1>My Blog</h1>
+  </header>
 
-    <script>
-        // Add event listener for the Enter key
-        document.getElementById("taskInput").addEventListener("keydown", function(event) {
-            if (event.key === "Enter") {
-                addTask();
-            }
-        });
+  <main>
+    <article>
+      <h2 class="post-title">First Blog Post</h2>
+      <p class="post-date">June 1, 2023</p>
+      <p class="post-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec dapibus lorem. Quisque quis sapien vitae ex pellentesque finibus a ac massa. Integer feugiat urna non neque eleifend, non tincidunt dui tincidunt.</p>
+    </article>
 
-        // Function to add a new task
-        function addTask() {
-            var taskInput = document.getElementById("taskInput");
-            var taskList = document.getElementById("taskList");
-            
-            if (taskInput.value.trim() !== "") {
-                var taskItem = document.createElement("li");
-                taskItem.className = "taskItem";
-                taskItem.innerHTML = '<input type="checkbox"><span class="taskText">' + taskInput.value + '</span>';
-                taskList.appendChild(taskItem);
-                
-                taskInput.value = "";
-            }
-        }
-    </script>
+    <article>
+      <h2 class="post-title">Second Blog Post</h2>
+      <p class="post-date">June 8, 2023</p>
+      <p class="post-content">Nullam id nisi feugiat, semper turpis at, accumsan leo. Curabitur tempus bibendum erat, in rutrum leo facilisis ut. Fusce sit amet interdum lacus. Vivamus nec tristique lectus, in auctor velit.</p>
+    </article>
+  </main>
+
+  <script>
+    // You can add JavaScript code here if needed
+  </script>
 </body>
 </html>
